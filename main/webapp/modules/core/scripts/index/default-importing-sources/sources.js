@@ -90,10 +90,9 @@ UrlImportingSourceUI.prototype.attachUI = function(bodyDiv) {
   this._elmts.nextButton.html($.i18n('core-buttons/next'));
 
   this._elmts.form.submit(function(evt){
-    evt.preventDefault();
-      if(!isUrlValid(self._elmts.urlInput[0].value)) {
-       var importUrl = self._elmts.urlInput[0].value;
-       var validUrl = false;
+  evt.preventDefault();
+     var importUrl = self._elmts.urlInput[0].value;
+     var validUrl = false;
 
       if(isUrlValid(importUrl)) {
         validUrl = true;
